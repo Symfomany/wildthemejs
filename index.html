@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app" :class="{hide: coche}">
+
+        <input type="search" v-model="search">
+        <ul>
+            <li v-for="article in articlesFiltres">{{ article }}</li>
+        </ul>
+
+        {{ message }}
+        <input @keyup="controler()" type="text" v-model="val" />
+        <input type="text" v-model="valTwo" />
+
+        <input :disabled="coche" type="checkbox" @click="cocher()" />Cochez-moi! {{ valTwo.length }} caractère<span v-if="valTwo.length > 1">s</span>
+    </div>
+
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
