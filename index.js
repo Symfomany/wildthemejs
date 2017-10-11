@@ -8,6 +8,9 @@ var app = new Vue({
         val: '',
         coche: false,
         valTwo: '',
+        input: false,
+        slider: 20,
+        text: 'text',
         search: '',
         articles: ['Tchikita', 'en Y', 'Wesh Alors']
     },
@@ -27,6 +30,13 @@ var app = new Vue({
         }
     },
     watch: {
+        slider: function (val) {
+            if (val > 30) {
+                this.input = true
+            } else {
+                this.input = false;
+            }
+        },
         valTwo: function (val) {
             if (val == 'JUL') {
                 this.message = ''
@@ -37,6 +47,7 @@ var app = new Vue({
         articlesFiltres: function () {
             if (this.articlesFiltres.length == 1) {
                 this.message = "C'est forcement JUL!"
+                this.text = 'checkbox'
             }
         }
 
@@ -47,7 +58,8 @@ var app = new Vue({
             if (this.search == "") {
                 return this.articles;
             } else {
-                return this.articles.filter((eltCourant) => eltCourant == this.search)
+                const regex = new RegExp(this.search, 'i');
+                return this.articles.filter((eltCourant) => regex.test(eltCourant))
             }
         }
     }
