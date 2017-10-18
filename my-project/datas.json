@@ -1,0 +1,46 @@
+{
+  "datas": [
+    {
+      "id": 1,
+      "name": "Rick",
+      "poste": "Chef de groupe",
+      "sexe": false,
+      "age": 45
+    },
+    {
+      "id": 2,
+      "name": "Daryl",
+      "poste": "Motard",
+      "sexe": false,
+      "age": 42
+    },
+    {
+      "id": 3,
+      "name": "Michonne",
+      "poste": "Chasseuse",
+      "sexe": true,
+      "age": 40
+    },
+    {
+      "sexe": null,
+      "name": "Negan",
+      "age": "53",
+      "poste": "Sauveur",
+      "id": 4
+    },
+    {
+      "sexe": false,
+      "name": "Gouverneur",
+      "poste": "Méchant",
+      "age": "45",
+      "id": 5
+    },
+    {
+      "sexe": false,
+      "name": "Jeremy",
+      "age": "43",
+      "poste": "Méchant",
+      "id": 6
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 import About from '@/components/About';
 import HelloWorld from '@/components/HelloWorld';
+import Liste from '@/components/Liste';
+
 import Vue from 'vue';
 import Router from 'vue-router';
 
@@ -16,6 +18,11 @@ export default new Router({
       path: '/about',
       name: 'About',
       component: About
-    }
+    },
+    {
+      path: '/liste',
+      name: 'Liste',
+      component: Liste
+    },
   ]
 })
